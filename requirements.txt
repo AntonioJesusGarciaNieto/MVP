@@ -9,3 +9,5 @@ django-nose
 django_heroku
 gunicorn
 Pillow
+tensorflow
+numpy

@@ -3,7 +3,6 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from main import views
-from main import recomendations
 
 urlpatterns = [
     path('',views.index),
