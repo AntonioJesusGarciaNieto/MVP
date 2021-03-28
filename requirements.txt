@@ -3,5 +3,5 @@ coverage
 Django
 gunicorn
 Pillow
-tensorflow
+tensorflow-cpu
 numpy
