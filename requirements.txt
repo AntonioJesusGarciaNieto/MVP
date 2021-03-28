@@ -6,4 +6,5 @@ Pillow
 tensorflow-cpu== 2.4.1
 numpy
 matplotlib
+python3-opencv
 opencv-python
