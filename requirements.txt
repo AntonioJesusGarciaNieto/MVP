@@ -3,5 +3,5 @@ coverage
 Django
 gunicorn
 Pillow
-tensorflow=1.15
+tensorflow==1.15
 numpy
