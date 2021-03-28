@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+	<meta charset='utf-8'>
+	<title>Trabajo de Fin de Grado {% block titulo %} {% endblock %}</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  </head>
+  <body>
+  
+		<br></br>
+		<figure class="text-center">
+			<h1> TFG- Asistente de decisión clínica</h1>
+		</figure>
+
+
+		<div class="container">
+			<nav class="navbar navbar-toggler navbar-dark bg-dark">
+			  <div class="container-md">
+				<a class="navbar-brand" href="/index.html">Inicio</a>
+				{%if is_active %}
+					<a class="navbar-brand" href="/dossieres">Listado de dossieres</a>
+				{%endif%}
+					<a class="navbar-brand" href="/readme">Readme del proyecto</a>
+				{%if is_active %}
+					<a class="navbar-brand" href="/logout">Log out</a>
+				{%else%}
+					<a class="navbar-brand" href="/login">Log in</a>
+				{%endif%}
+			  </div>
+			</nav>
+		</div>
+
+
+
+		<div class="contenido">
+		{% block contenido %} {% endblock %}
+		</div>
+
+		<hr>
+
+		<figure class="text-center">
+			<h1><input type="button" class="btn btn-dark" style="height:50px;font-size:14pt;width:800px;" onclick="history.back()" name="volver atrás" value="Volver atrás"></h1>
+		</figure>
+
+		<hr>
+
+		<figure class="text-center">
+			<blockquote class="blockquote">
+			  <p>Proyecto realizado por:  <b>Antonio Jesús Gracía Nieto</b></p> 
+			</blockquote>
+			<figcaption class="blockquote-footer">
+			  Correo de contacto <cite title="Source Title">antgarnie1@alum.us.es</cite>
+			</figcaption>
+		</figure>
+		<br></br>
+
+  </body>
+</html>

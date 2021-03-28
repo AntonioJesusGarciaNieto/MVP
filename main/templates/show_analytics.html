@@ -1,0 +1,33 @@
+{% extends 'master.html' %}
+{% block encabezado %}
+<h1> README </h1>
+
+{% endblock %}
+
+
+{% block contenido %}
+	<br></br>
+	<div class="container">
+	
+	{% if ready %}
+		<figure class="text-center"><img src={{url}}  width="500" height="500"></figure>
+		
+		<table class="table table-sm table-striped table-hover" >
+			<tr>
+				<td class ="text-center"><b style="font-size:18pt;">Tipo de lesión de piel</b></td>
+				<td class ="text-center"><b style="font-size:18pt;">Porcentaje de acierto</b></td>
+			{% for e,a in res %}
+				<tr>
+					<td class ="text-center">{{e}}</td>
+					<td class ="text-center">{{a}}</td>
+				</tr>
+			{% endfor %}
+			</tr>
+		</table>
+	{%endif%}
+		
+
+</div> 
+
+{% endblock %}
+

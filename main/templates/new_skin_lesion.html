@@ -1,0 +1,50 @@
+{% extends 'master.html' %}
+{% block encabezado %}
+<h1> README </h1>
+
+{% endblock %}
+
+
+{% block contenido %}
+	<br></br>
+	<div class="container">
+		
+	{% if ready %}
+		<figure class="text-center"><img src={{url}}  width="500" height="500"></figure>
+		
+		<table class="table table-sm table-striped table-hover" >
+			<tr>
+				
+				<td class ="text-center"><b style="font-size:18pt;">Tipo de lesión de piel</b></td>
+				<td class ="text-center"><b style="font-size:18pt;">Porcentaje de acierto</b></td>
+			{% for e,a in res %}
+				<tr>
+					<td class ="text-center">{{e}}</td>
+					<td class ="text-center">{{a}}</td>
+				</tr>
+			{% endfor %}
+			</tr>
+		</table>
+
+        <h3>Añade una nueva lesión</h3>
+	{%endif%}
+		
+
+    <form action="/new_skin_lesion/" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <p>
+          <input id="id_image" class="btn btn-dark" type="file" accept="image/*" name="image" required>
+      </p>
+      <p>
+          Image name:
+          <input id="id_name" class="btn btn-dark" type="text" name="name" required>
+      </p>
+      <input type="submit" class="btn btn-dark" value="Analizar" />
+	  <input type="hidden" name=dossier_id value={{dossier_id}}>
+
+    </form>
+
+</div> 
+
+{% endblock %}
+

@@ -1,0 +1,39 @@
+{% extends 'master.html' %}
+{% block encabezado %}
+<h1> Etiquetas más populares </h1>
+
+{% endblock %}
+
+
+{% block contenido %}
+
+	<br></br>
+	<div class="container">
+	{% if dossiers_and_count %}
+		<table class="table table-sm table-striped table-hover" >
+			<tr>
+				<td class ="text-center"><b style="font-size:18pt;">Nombre de la etiqueta</b></td>
+				<td class ="text-center"><b style="font-size:18pt;">Número de imágenes</b></td>
+           		<td class ="text-center"><b style="font-size:18pt;">Acciones</b></td>
+		{% for dac in dossiers_and_count %}
+			<tr>
+				<td class ="text-center">{{dac.0}}</td>
+        		<td class ="text-center">{{dac.1}}</td>
+            	<td class ="text-center">
+                <form id='formulario' method='POST' action='/show_dossier/'>{% csrf_token %}
+                    <input type="submit" class="btn btn-dark" name="show" value="Ver en detalle">
+					<input type="hidden" name=dossier_id value={{dac.0.id}}>
+             	</form>
+            	</td>
+			</tr>
+		{% endfor %}
+		</table>
+	{% endif %}
+		
+		<form id='formulario' method='GET' action='/new_dossier'>{% csrf_token %}
+			<a style="font-size:18pt;" >Añadir un nuevo dossier</a> &nbsp; &nbsp; <input type="submit" class="btn btn-dark" name="new" value="+">
+	  	</form>
+	</div>
+
+		<br/>		    
+{% endblock %}
