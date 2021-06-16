@@ -1,0 +1,9 @@
+requests
+coverage
+Django
+gunicorn
+Pillow
+tensorflow-cpu== 2.4.1
+numpy
+matplotlib
+opencv-python-headless
