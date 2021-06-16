@@ -8,19 +8,63 @@
 {% block contenido %}
 <br></br>
 <div class="container">
-	<h1>Bienvenido a mi proyecto de TFG</h1>
-	<p> En este proyecto se ha realizado un estudio ... </p>
+	<h1 class="card-header bg-dark text-white mb-3">SkinLearning</h1>
 
-	<h2>Análisis de artículos</h2>
-		<ul><a href="https://github.com/AntonioJesusGarciaNieto/TFG/blob/main/Documentaci%C3%B3n/An%C3%A1lisis%20de%20art%C3%ADculos/Formato%20Markdown/Markdown_An%C3%A1lisis%20de%20An%20Ensemble%20of%20Fine-Tuned%20Convolutional%20Neural.md" target="_blank">An Ensemble of Fine-Tuned Convolutional Neural Networks for Medical Image Classification</a></ul>
-		<ul><a href="https://github.com/AntonioJesusGarciaNieto/TFG/blob/main/Documentaci%C3%B3n/An%C3%A1lisis%20de%20art%C3%ADculos/Formato%20Markdown/Markdown_An%C3%A1lisis%20de%20Multiple%20sclerosis%20identification%20by%20convolutional%20neural%20network%20with%20dropout%20and%20parametric%20ReLU%20of%20Zhang%20Y-Dong%2C%20Pan%20C%2C%20Sun%20J%2C%20Tang%20C.md" target="_blank" >Multiple sclerosis identification by convolutional neural network with dropout and parametric ReLU</a></ul>
-		<ul><a href="https://github.com/AntonioJesusGarciaNieto/TFG/blob/main/Documentaci%C3%B3n/An%C3%A1lisis%20de%20art%C3%ADculos/Formato%20Markdown/Markdown_An%C3%A1lisis%20de%20PARALLEL%20CONVOLUTIONAL-LINEAR%20NEURAL%20NETWORK%20FOR%20MOTOR%20IMAGERY%20CLASSIFICATION.md" target="_blank" >PARALLEL CONVOLUTIONAL-LINEAR NEURAL NETWORK FOR MOTOR IMAGERY CLASSIFICATION</a></ul>
+
+	<div class="card bg-secondary text-white">
+		<h4 class="card-header bg-dark mb-3">  Presentación</h4>
+		<div class="card-body">
+			<h5 class="card-text"> SkinLearning es una demo que muestra una aplicación directa y escalable de las investigaciones recogidas a lo largo del 
+				TFG: Sistema de apoyo a la decisión clínica para el estudio de lesiones de piel, basado en Deep learning.</h5>
+		</div>  	
+	</div>
+	<br>
+	
+	<div class="card bg-secondary text-white">
+		<h4 class="card-header bg-dark mb-3"> Información de contacto </h4>
+		<div class="card-body">
+			<h5 class="card-text"> 
+					<ul> <b> Universidad: </b> Universidad de Sevilla </ul>
+					<ul> <b> Centro de estudio: </b>  Escuela Técnica Superior de Ingeniería Informática.</ul>
+					<ul> <b> Título del proyecto:</b>  Sistema de apoyo a la decisión cínica para el estudio de lesiones de piel basado en aprendizaje automático.</ul>
+					<ul> <b> Palabras clave:</b>  Redes neuronales convolucionales, Detección de lesiones de piel, Aprendizaje profundo, Segmentación semántica, Sistema de asistencia clínica.</ul>
+					<ul> <b> Tutor:</b>  Isabel de los Ángeles Nepomuceno Chamorro.</ul>
+				</h5>
+		</div>  
+	</div>
+
+	<br>
+
+	<div class="card bg-secondary text-white">
+		<h4 class="card-header bg-dark mb-3"> Herramientas </h4>
+		<div class="card-body">
+			<h5 class="card-text"> 
+				<p> Esta aplicación web esta compuesta por:
+					<ul> Un <b> back-end </b> basado en el framework Django, opción elegida por ser compatible con python 3.x y los sistemas creados durante la invstigación sin necesidad de usar software extra como tensorflow.js.</ul> 
+					<ul> Un <b> front-end </b> basado en bootstrap. </ul>
+					<ul> Un <b> sistema de despligue </b> remoto: Heroku.</ul>
+					<ul> Un <b> sistema de gestión del código fuente </b>: GitHub. </ul>
+				</p>
+			</h5>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="card bg-secondary text-white">
+		<h4 class="card-header bg-dark mb-3"> Guia de uso </h4>
+		<div class="card-body">
+			<h5 class="card-text"> 
+				<p> La pagina de inicio de la demo consta inicialmente de un menú de navegación compuesto por tres secciones: inicio, readme del proyecto y log in. Para probar la demo completa debemos seguir el siguiente flujo:
+					<ol><b>1.  Crear un usuario.</b> Para ello clickamos en log in, aquí y completamos el formulario. </ol>
+					<ol><b>2. Crear un dossier con una imágen.</b> Una vez loggeados nos aparecerá una nueva opción en la barra de navegación: "Listado de dossieres", clickamos en ella, posteriormente en el simbolo [+] y rellenamos los campos indicados: título del dossier, imágen y título de la imagen. Pinchamos en aceptar. </ol>
+					<ol><b>3. Analizar la imágen. Clickamos de nuevo en "listado de dossieres".</b> Nos aparecerá el nuevo dossier. Pinchamos en ver en detalles. Nos mostrará la información referente a la imágen. Damos a analizar y ... </ol>
 		
-	<h2>Experimentos realizados</h2>
-	<h2>Análisis de arquitecturas</h2>
-
-
-
+				¡Listo! nuestra lesión ya ha sido clasificada por una CNN.</p>
+			</h5>
+		</div>
+	</div>
+<br>
 </div> 
 
 {% endblock %}
