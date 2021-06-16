@@ -5,7 +5,7 @@ install:
 - pip install -r requirements.txt
 - pip install codacy-coverage
 script:
-- cd EjercicioDjango
+- cd MVPTFG
 deploy:
   buildpack: python
   provider: heroku
