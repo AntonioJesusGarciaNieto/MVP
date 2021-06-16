@@ -86,7 +86,8 @@ def new_dossier(request):
         user_name = request.session['user_name']
         user_pass = request.session['user_pass']
 
-        if True:
+        
+        if request.FILES.get("image"):
             img = Skin_Lesion()
             img.image = request.FILES.get("image")
             img.name = request.POST.get("name")
@@ -102,9 +103,18 @@ def new_dossier(request):
             user.dossier.add(doss)
 
             request.session.modified = True
-        
-        
-        is_active = request.session.get("user_active",False)
+            
+            user = Custom_User.objects.get(user_name=user_name,user_pass=user_pass)
+
+            dossiers = user.dossier.all()
+
+            dossiers_and_count = []
+            for doss in dossiers:
+                img_number = doss.skin_lesion.count()
+                dossiers_and_count.append((doss,img_number))
+
+            is_active = request.session.get("user_active",False)
+            return render(request,'dossiers.html',{'is_active':is_active,'dossiers_and_count':dossiers_and_count})
 
     is_active = request.session.get("user_active",False)
         
