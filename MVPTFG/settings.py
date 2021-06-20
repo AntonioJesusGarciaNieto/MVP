@@ -38,7 +38,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'EjercicioDjango.urls'
+ROOT_URLCONF = 'MVPTFG.urls'
 
 TEMPLATES = [
     {
@@ -56,7 +56,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'EjercicioDjango.wsgi.application'
+WSGI_APPLICATION = 'MVPTFG.wsgi.application'
 
 
 # Database

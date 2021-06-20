@@ -14,12 +14,10 @@
 		<table class="table table-sm table-striped table-hover" >
 			<tr>
 				<td class ="text-center"><b style="font-size:18pt;">ID</b></td>
-				<td class ="text-center"><b style="font-size:18pt;">Resultados</b></td>
                 <td class ="text-center"><b style="font-size:18pt;">Actividad</b></td>
 		{% for sl in skinsLesions %}
 			<tr>
 				<td class ="text-center">{{sl.id}}</td>
-        		<td class ="text-center">ToDo</td>
             	<td class ="text-center">
                     <form id='formulario' method='POST' action='/analyze/'>{% csrf_token %}
                         <input type="submit" class="btn btn-dark" name="Analizar" id="sl_id" value="Analizar"></td>
